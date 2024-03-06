@@ -16,6 +16,7 @@ export const Cursor = memo(({ connectionId }: CursorProps) => {
   const cursor = useOther(connectionId, (user) => user.presence.cursor);
 
   const name = info?.name || "Teammate";
+  console.log("name", name)
 
   if (!cursor) {
     return null;
@@ -38,14 +39,13 @@ export const Cursor = memo(({ connectionId }: CursorProps) => {
           fill: connectionIdToColor(connectionId),
           color: connectionIdToColor(connectionId),
         }}
+      />
+      <div
+        className="absolute left-5 px-1.5 py-0.5 rounded-md text-xs text-white font-semibold"
+        style={{ backgroundColor: connectionIdToColor(connectionId) }}
       >
-        <div
-          className="absolute left-5 px-1.5 py-0.5 rounded-md text-xs text-white font-semibold"
-          style={{ backgroundColor: connectionIdToColor(connectionId) }}
-        >
-          {name}
-        </div>
-      </MousePointer2>
+        {name}
+      </div>
     </foreignObject>
   );
 });

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
 import { ConvexClientProvider } from "@/providers/convex-client-provider";
 import { Toaster } from "sonner";
 import { ModalProvider } from "@/providers/modal-provider";
