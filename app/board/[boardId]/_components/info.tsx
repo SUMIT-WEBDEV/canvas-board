@@ -48,7 +48,7 @@ export const Info = ({ boardId }: InfoProps) => {
                 font.className
               )}
             >
-              CanvasCraft
+              Collaboard
             </span>
           </Link>
         </Button>
